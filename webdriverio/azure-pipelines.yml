@@ -15,10 +15,11 @@ steps:
     displayName: 'Install npm dependencies'
 
   - script: |
-      cd webdriverio
+      cd webdriverio  # or remove this if your config is in root
       echo "Running WebdriverIO tests on Sauce Labs..."
-      npm test
+      npx wdio run wdio.conf.js
     env:
       SAUCE_USERNAME: $(SAUCE_USERNAME)
       SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)
     displayName: 'Run WebdriverIO tests'
+

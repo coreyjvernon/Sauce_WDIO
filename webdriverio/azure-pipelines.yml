@@ -1,0 +1,27 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  SAUCE_USERNAME: $(sauceUsername)
+  SAUCE_ACCESS_KEY: $(sauceAccessKey)
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '14.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install
+    displayName: 'Install npm dependencies'
+
+  - script: |
+      echo "Running WebdriverIO tests on Sauce Labs..."
+      npx wdio run wdio.conf.js --logLevel debug
+    env:
+      SAUCE_USERNAME: $(SAUCE_USERNAME)
+      SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)
+    displayName: 'Run WebdriverIO tests'

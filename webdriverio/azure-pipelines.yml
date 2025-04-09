@@ -15,8 +15,9 @@ steps:
     displayName: 'Install npm dependencies'
 
   - script: |
+      cd $(System.DefaultWorkingDirectory)
       echo "Running WebdriverIO tests on Sauce Labs..."
-      npx wdio run wdio.conf.js --logLevel debug
+      npm test
     env:
       SAUCE_USERNAME: $(SAUCE_USERNAME)
       SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)

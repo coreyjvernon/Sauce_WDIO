@@ -13,7 +13,7 @@ steps:
   - script: |
       npm install
     displayName: 'Install npm dependencies'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/demo-js/webdriverio'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/webdriverio'
 
   - script: |
       cd webdriverio  # or remove this if your config is in root

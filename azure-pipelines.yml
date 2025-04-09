@@ -16,7 +16,6 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/webdriverio'
 
   - script: |
-      cd webdriverio  # or remove this if your config is in root
       echo "Running WebdriverIO tests on Sauce Labs..."
       npx wdio run wdio.conf.js
     env:

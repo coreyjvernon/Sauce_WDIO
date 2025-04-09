@@ -15,7 +15,7 @@ steps:
     displayName: 'Install npm dependencies'
 
   - script: |
-      cd $(System.DefaultWorkingDirectory)
+      cd webdriverio
       echo "Running WebdriverIO tests on Sauce Labs..."
       npm test
     env:

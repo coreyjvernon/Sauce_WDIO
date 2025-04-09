@@ -5,8 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  SAUCE_USERNAME: $(sauceUsername)
-  SAUCE_ACCESS_KEY: $(sauceAccessKey)
+  SAUCE_USERNAME: $(SAUCE_USERNAME)
+  SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)
 
 steps:
   - task: NodeTool@0

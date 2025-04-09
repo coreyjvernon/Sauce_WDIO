@@ -73,8 +73,7 @@ exports.config = {
           build: 'Azure CI Build',
           name: 'Azure Sauce Demo Test'
         }
-      }]
-
+      }],
     //
     // ===================
     // Test Configurations

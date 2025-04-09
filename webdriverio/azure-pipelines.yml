@@ -4,10 +4,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  SAUCE_USERNAME: $(SAUCE_USERNAME)
-  SAUCE_ACCESS_KEY: $(SAUCE_ACCESS_KEY)
-
 steps:
   - task: NodeTool@0
     inputs:

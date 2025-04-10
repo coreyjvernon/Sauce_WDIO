@@ -66,12 +66,19 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome',
+      /*  browserName: 'chrome',
         browserVersion: 'latest',
         platformName: 'Windows 11',
         'sauce:options': {
           build: 'Azure CI Build',
           name: 'Azure Sauce Demo Test'
+        },*/
+        browserName: 'safari',
+        browserVersion: 'latest',
+        platformName: 'macOS 13',
+        'sauce:options': {
+          build: 'Safari Build',
+          name: 'Safari Sauce Demo Test'
         }
       }],
     //

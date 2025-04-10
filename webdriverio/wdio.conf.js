@@ -73,13 +73,23 @@ exports.config = {
           build: 'Azure CI Build',
           name: 'Azure Sauce Demo Test'
         },*/
-        browserName: 'safari',
+       /* browserName: 'safari',
         browserVersion: 'latest',
         platformName: 'macOS 13',
         'sauce:options': {
           build: 'Safari Build',
           name: 'Safari Sauce Demo Test'
-        }
+        },*/
+        platformName: 'Android',
+        browserName: 'Chrome',
+        'appium:deviceName': 'Samsung Galaxy S6 GoogleAPI Emulator',
+        'appium:platformVersion': 'current_major',
+        'appium:automationName': 'UiAutomator2',
+        'sauce:options': {
+            build: 'Android Build',
+            name: 'Android Demo Test',
+            deviceOrientation: 'PORTRAIT',
+        },
       }],
     //
     // ===================
